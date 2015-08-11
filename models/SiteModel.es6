@@ -1,10 +1,17 @@
-export default function(Model) {
+export default function(Model, utils) {
 
   return Model.extend('Site',
   {
     type           : 'ORM',
     timeStampable  : true,
-    softDeleteable : false
+    softDeleteable : false,
+
+    'PageModel beforeAllFindersOptions': function(findOptions, queryOptions, callback) {
+      utils.helpers
+        .includeModel(findOptions, this, 'Site');
+
+      callback(null, findOptions);
+    }
   },
   {
     id: {
@@ -13,10 +20,6 @@ export default function(Model) {
       autoIncrement : true
     },
     url: {
-      type          : String,
-      required      : true
-    },
-    title: {
       type          : String,
       required      : true
     },

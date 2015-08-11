@@ -1,0 +1,22 @@
+{
+  "SiteModel": [
+    {
+      "url": "cleverstack.io",
+      "name": "CleverStack",
+      "active": true
+    }
+  ],
+  "PageModel": [
+    {
+      "title": "CleverStack Homepage",
+      "name": "home",
+      "content": "This is the everywhere content! fucking jono you dick head!! lol",
+      "active": true,
+      "associations": {
+        "SiteModel": {
+          "url": "cleverstack.io"
+        }
+      }
+    }
+  ]
+}

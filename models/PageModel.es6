@@ -1,10 +1,17 @@
-export default function(Model) {
+export default function(Model, utils) {
 
   return Model.extend('Page',
   {
     type           : 'ORM',
     timeStampable  : true,
-    softDeleteable : false
+    softDeleteable : false,
+
+    'SiteModel beforeAllFindersOptions': function(findOptions, queryOptions, callback) {
+      utils.helpers
+        .includeModel(findOptions, this, 'Pages');
+
+      callback(null, findOptions);
+    }
   },
   {
     id: {
