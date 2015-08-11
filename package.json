@@ -1,0 +1,22 @@
+{
+  "private"     : true,
+  "name"        : "saas-blog",
+  "description" : "Private Blog module that provides blogs SaaS style, and builds the static content to S3, cloudfront enabled websites!",
+  "version"     : "0.0.1",
+  "license"     : "Protected/Private",
+  "main"        : "module",
+  "author": {
+    "name"      : "Richard Gustin",
+    "email"     : "richard@rgnconsulting.com.au"
+  },
+  "scripts": {
+    "test"      : "grunt test:unit"
+  },
+  "devDependencies": {
+    "grunt"        : "~0.4.2",
+    "grunt-prompt" : "~1.3.0"
+  },
+  "peerDependencies": {
+    "clever-roles" : "~1.2.x"
+  }
+}
