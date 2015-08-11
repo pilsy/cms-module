@@ -1,5 +1,16 @@
 {
   "saas-blog": {
-    
+    "modelAssociations": {
+      "Site": {
+        "hasMany": [
+          ["Page", {"as": "Pages"}]
+        ]
+      },
+      "Page": {
+        "belongsTo": [
+          ["Site", {"as": "Site"}]
+        ]
+      }
+    }
   }
 }
