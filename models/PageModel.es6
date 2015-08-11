@@ -23,7 +23,7 @@ export default function(Model) {
     content: {
       type          : Model.Types.TEXT,
       required      : true
-    }
+    },
     active: {
       type          : Boolean,
       default       : false
